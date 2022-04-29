@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/7.0.0/d3.min.js"></script>
+        <script src="Scripts.js"></script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <title>| Campaigns.com |</title>
+<script>
+    function signup_form(){
+        
+  var x = document.getElementById("signup_form");
+        var y = document.getElementById("holder-list");
+        var z = document.getElementById("login_form");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+    function login_form(){
+        
+        var x = document.getElementById("login_form");
+        var y = document.getElementById("holder-list");
+        var z = document.getElementById("signup_form");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+        
+    }
+    function home(){
+        var x = document.getElementById("holder-list");
+        var y = document.getElementById("login_form");
+        var z = document.getElementById("signup_form");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  } 
+    }
+    
+</script>
+</head>
+<body class="d-flex flex-column min-vh-100 example">
+    <header class="topnav" id="myTopnav">
+        <a href="index.html" class="Logo">Campaigns.com</a>
+        <ul class="navibar">
+            <li style="display: flex;width: 150%;"><div class="search-container" style="display: flex; width: 100%;">
+                <form action="/action_page.php" style="display: flex;width: 100%;" id="navi">
+                  <input type="text" placeholder="Search.." name="search" id="search">
+                  <button type="submit" style="width: 50%; background-color: #FF6A3D;"><i class="fa fa-search" style="background-color: #FF6A3D;color: #ffffff;"></i></button>
+                </form>
+              </div></li>
+          <li><button id="home" onclick="home();" class="active" style="width: auto;">Home</button></li>
+          <li><button id="login_btn" onclick="login_form();" class="" style="width: auto;">Login</button></li>
+          <li><button id="signup_btn" onclick="signup_form();" class="" style="width: auto;display: flex;">Sell</button></li>
+
+          <li><a href="#"><i class="fa fa-shopping-bag" id="bag"></i></a></li>
+          
+        </ul>
+        
+      </header> 
+      <div class="main-body" id="main-body">
+          <div class="holder-list" id="holder-list">
+             <!-- <div class="tabslide" id="tabslide">
+                <ul class="nav nav-tabs" id="nav" role="tablist">
+                    <li class="active"><a href="#" id="drugs-pharma" data-bs-toggle="tab" data-bs-target="#drugs-pharma-tab">Drugs And Pharma</a></li>
+                    <li><a href="#" id="hospital" data-bs-toggle="tab" data-bs-target="#hospital-tab"> Hospitals and Diagnostics</a></li>
+                    <li><a href="#" id="food-agro" data-bs-toggle="tab" data-bs-target="#food-agro-tab"> Food And Agriculture</a></li>
+                    <li><a href="#" id="industry-machinery" data-bs-toggle="tab" data-bs-target="#industrial-machinery-tab"> Industrial Machinery</a></li>
+                    <li><a href="#" id="industry-supply" data-bs-toggle="tab" data-bs-target="#industry-supply-tab"> Industrial Supplies</a></li>
+                    <li><a href="#" id="electronics" data-bs-toggle="tab" data-bs-target="#electronics-tab"> Electronics And Electrical Supplies</a></li>
+                    <li><a href="#" id="view-all" data-bs-toggle="tab"> view all >></a></li>
+                </ul>
+            </div>  -->
+            
+          <div class="row listed-services" name="row" id="listed-services">
+              <div class="col-lg-2 sec-left">
+                  <div class="card">
+                      
+                  </div>
+              </div>
+              <div class="col-lg-8 sec-mid">
+                  <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                      <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                      <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                          <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 5000/</p><span>day</span></div>
+                      
+                        <div class="billboard-info" style="background-color: #ffffff;">
+                            <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                            <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                                If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results. 
+                                Hoarding advertising in Bandra West 16042 is highly prominent and helps to reach out to a wide range of consumers. 
+                                You can explore Hoarding Advertising Rates in Media</p>
+                        </div>
+              </div>
+          </div>
+                      <div class="col-lg-3 place" style="flex: 1;">
+                          <!-- <div class="details_company">
+                              <p class="company-name"><span class="company_name">company name</span></p>
+                              <p class="location"><span class="location_company">company location</span></p>
+                              <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                              <p class="video"><span class="company_video">company video</span></p>
+                          </div> -->
+                          
+                          <div class="contact_btn">
+                              <button class="contact_supplier_btn">Add to Cart <p>Or request quote</p></button>
+                          </div>
+                          
+                      </div>
+                      
+                  </div>
+                  <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 15000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results.
+                            </p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p> Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 4000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results. 
+                              Hoarding advertising in Bandra West 16042 is highly prominent and helps to reach out to a wide range of consumers. 
+                              You can explore Hoarding Advertising Rates in Media</p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p>Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 2000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results. 
+                              Hoarding advertising in Bandra West 16042 is highly prominent and helps to reach out to a wide range of consumers. 
+                              You can explore Hoarding Advertising Rates in Media</p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p>Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                    <div class="col-lg-2" style="flex:1;background-color: #ffffff;"><div class="product_image"><img src="product/bandra_1.png" alt=""></div></div>
+                    <div class="col-lg-7" style="flex:1;background-color: #ffffff;">
+                        <div class="product_details"><h4>Hoarding Bandra West 16042</h4><div class="product_cost"><p>&#8377 5000/</p><span>day</span></div>
+                    
+                      <div class="billboard-info" style="background-color: #ffffff;">
+                          <a style="text-decoration: none;background-color: #ffffff;"><b style="background-color: #ffffff;">Description</b></a>
+                          <p style="background-color: #ffffff;">Hoarding ads in , Bandra West 16042 put your message right in front of your potential customers. 
+                              If you need to make a big impact in Bandra West 16042 advertising can raise your brands profile and deliver results. 
+                              Hoarding advertising in Bandra West 16042 is highly prominent and helps to reach out to a wide range of consumers. 
+                              You can explore Hoarding Advertising Rates in Media</p>
+                      </div>
+            </div>
+        </div>
+                    <div class="col-lg-3 place" style="flex: 1;">
+                        <!-- <div class="details_company">
+                            <p class="company-name"><span class="company_name">company name</span></p>
+                            <p class="location"><span class="location_company">company location</span></p>
+                            <p class="supplier"><span class="supplier_type">supplier type</span><span class="verify_type">verification type</span></p>
+                            <p class="video"><span class="company_video">company video</span></p>
+                        </div> -->
+                        
+                        <div class="contact_btn">
+                            <button class="contact_supplier_btn">Add to Cart <p>Or request quote</p></button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                  <!-- <div class="row" id="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                      <div class="col-lg-3" style="flex:1;background-color: #ffffff;">image</div>
+                      <div class="col-lg-7" style="flex:1;background-color: #ffffff;">Details</div>
+                      <div class="col-lg-2 place" style="flex: 1;">order placement</div>
+                  </div>
+                  <div class="row" id="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                      <div class="col-lg-3" style="flex:1;background-color: #ffffff;">image</div>
+                      <div class="col-lg-7" style="flex:1;background-color: #ffffff;">Details</div>
+                      <div class="col-lg-2 place" style="flex: 1;">order placement</div>
+                  </div>
+                  <div class="row" id="row" style="display:inline-flexbox;background-color: #ffffff;min-height: 300px;">
+                      <div class="col-lg-3" style="flex:1;background-color: #ffffff;">image</div>
+                      <div class="col-lg-7" style="flex:1;background-color: #ffffff;">Details</div>
+                      <div class="col-lg-2 place" style="flex: 1;">order placement</div>
+                  </div> -->
+              </div>
+              <div class="col-lg-2 sec-right">
+                  <div class="card">
+                      today
+                  </div>
+              </div>
+  
+          </div>
+          </div>
+          
+                
+    <div id="login_form" class="login_form_cntr hide">
+        <div class="container">
+            <h1>Login Form</h1>
+            <form action="login.php">
+                <label for="username">Username:</label>
+                <input type="Username" placeholder="Enter Username" name="username" id="uname">
+                <label for="Password">Password:</label>
+                <input type="Password" placeholder="Enter Password" name="password" id="psw">
+                <button type="submit" class="login_submit active">Login</button>
+                <button type="submit" class="login_cancel active">Cancel</button>
+                <ul class="btn2">
+                    <li class="text-white">Forgot </li>
+                    <li><a href="#">password?</a></li>
+                  </ul>
+            </form>
+        </div>
+    </div>   
+    <div id="signup_form" class="signup_form_cntr hide">
+        <div class="container">
+            
+                <h1>Sign Up Form</h1>
+            <form action="signup.php" enctype="multipart/form-data" method="post" style="width: 100%;">
+                <div class="row" style="width: 100%;">
+                    <div class="col-sm-6">
+                        
+                        <input type="file" name="profileimage" onchange="displayimage(this)" id="profileimage" style="display: none;">
+                        <label for="ownername">Owner's name:</label>
+                        <input type="text" placeholder="Enter owner's name" name="ownername" id="ownername">
+                        <label for="ownername">Company name:</label>
+                        <input type="text" placeholder="Enter Company name" name="companyname" id="companyname">
+                        <label for="location">location:</label>
+                        <input type="text" name="street" id="street" placeholder="Enter Street / Lane / Plot no">
+                        <input type="text" name="Area" id="Area" placeholder="Enter Area / locality">
+                        <input type="text" name="city" id="city" placeholder="Enter City">
+                        <input type="text" name="state" id="state" placeholder="Enter State">
+                        <input type="text" name="zip" id="zip" placeholder="Zipcode">
+                        <label for="username">Username:</label>
+                        <input type="Username" placeholder="Enter Username" name="uname" id="uname">
+                        <label for="Password">Password:</label>
+                        <input type="Password" placeholder="Enter Password" name="psw" id="psw">
+                        <button type="submit" name="signup_click" class="signup_submit active">Sign Up</button>
+                        <button type="submit" class="signup_cancel active">Cancel</button>
+                        <ul class="btn2">
+                            <li class="text-white">Forgot </li>
+                            <li><a href="#">password?</a></li>
+                          </ul>
+                        
+                        </div>
+                        <div class="col-sm-6" style="text-align: center;align-items: center;">
+                            <img src="images/placeholder.png" onclick="trigger_click()" alt="companylogo" id="companylogo">
+                            <label for="Companylogo" style="text-align: center;margin-left: 40%;margin-right: 40%;">Upload Company Logo</label>
+                        </div>
+
+                </div>
+                
+            </form>
+        </div>
+    </div> 
+    </div> 
+    <footer class="mt-auto">
+        <div class="footer-content">
+            <h3>Campaigns.com</h3>
+            <p>Campaigns.com is a website where people can lease media spaces, plan advertisment campaigns and get consultation from expert as per the custom requirements and buget of user</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="	fab fa-twitter"></i></a></li>
+             </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 <a href="#">Campaigns.com</a>  </p>
+         </div>
+
+
+    </footer> 
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script> 
+
+</body>
+</html>

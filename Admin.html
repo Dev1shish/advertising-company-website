@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/7.0.0/d3.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="index.js" href="index.js"></script>
+    <script src="Scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <title>Admin</title>
+</head>
+<body class="example">
+    <div id="signup_form" class="signup_form_cntr">
+        <div class="container">
+            
+                <h1>ADD Product</h1>
+            <form action="admin.php" enctype="multipart/form-data" method="post" style="width: 100%;">
+                <div class="row" style="width: 100%;">
+                    <div class="col-sm-6">
+                        
+                        <input type="file" name="profileimage" onchange="displayimage(this)" id="profileimage" style="display: none;">
+                        <label for="ownername">Product type:</label>
+                        <input type="ownername" placeholder="Enter type of Advertising site (eg. Billboard, online etc.)" name="ownername" id="ownername">
+                        <label for="ownername">Catergory:</label>
+                        <input type="companyname" placeholder="Enter Category" name="companyname" id="companyname">
+                        <label for="location">location:</label>
+                        <input type="text" name="location" id="street" placeholder="Enter Street / Lane / Plot no">
+                        <input type="text" name="location" id="Area" placeholder="Enter Area / locality">
+                        <input type="text" name="location" id="city" placeholder="Enter City">
+                        <input type="text" name="location" id="state" placeholder="Enter State">
+                        <input type="text" name="location" id="zip" placeholder="Zipcode">
+                        <!--label for="username">Username:</label>
+                        <input type="Username" placeholder="Enter Username" name="username" id="uname">
+                        <label for="Password">Password:</label>
+                        <input type="Password" placeholder="Enter Password" name="password" id="psw"-->
+                        <button type="submit" name="signup_click" class="signup_submit active" style="border-radius: 20px; height: auto;">Post</button>
+                        <button type="submit" class="signup_cancel active" style="border-radius: 20px; height: auto;">Cancel</button>
+                        <!--<ul class="btn2">
+                            <li class="text-white">Forgot </li>
+                            <li><a href="#">password?</a></li>
+                          </ul>-->
+                        
+                        </div>
+                        <div class="col-sm-6" style="text-align: center;align-items: center;">
+                            <img src="images/placeholder.png" onclick="trigger_click()" alt="companylogo" id="companylogo">
+                            <label for="Companylogo" style="text-align: center;margin-left: 40%;margin-right: 40%;">Upload Media-space image</label>
+                        </div>
+
+                </div>
+                
+            </form>
+        </div>
+    </div> 
+    <footer>
+        <div class="footer-content">
+            <h3>Campaigns.com</h3>
+            <p>Campaigns.com is a website where people can lease media spaces, plan advertisment campaigns and get consultation from expert as per the custom requirements and buget of user</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+             </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 <a href="#">Campaigns.com</a>  </p>
+         </div>
+
+
+    </footer>  
+</body>
+</html>
